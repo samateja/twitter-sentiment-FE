@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {XYPlot,XAxis,YAxis,VerticalGridLines, HorizontalGridLines,VerticalBarSeries} from 'react-vis';
 
 import './App.css';
-import { CONFIG } from '../util/constants';
+import { CONFIG } from '../util/constant';
 import '../../node_modules/react-vis/dist/style.css';
 
 
