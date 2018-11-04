@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {XYPlot,XAxis,YAxis,VerticalGridLines, HorizontalGridLines,VerticalBarSeries} from 'react-vis';
 
 import './App.css';
+import { CONFIG } from '../util/constants';
 import '../../node_modules/react-vis/dist/style.css';
 
 
@@ -19,7 +20,7 @@ class App extends Component {
       if (string.match('#'))
         string = string.replace('#','');
 
-      const response = await fetch('http://localhost:3001/api/results/'+ string);
+      const response = await fetch(CONFIG.endpoint+'/api/results/'+ string);
       const body = await response.text();
       const parsedResponse = JSON.parse(body);
       const twitterData = parsedResponse.twData;
